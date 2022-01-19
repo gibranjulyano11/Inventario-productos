@@ -1,4 +1,5 @@
 ﻿using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using StoreApi.Core.Application.AttributeLogic;
@@ -9,6 +10,8 @@ namespace StoreApi.Controllers
 {
     [Route("api/attributes")]
     [ApiController]
+    [Authorize]
+
     public class AttributesController : ControllerBase
     {
         private readonly IMediator mediator;

@@ -1,4 +1,5 @@
 ﻿using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using StoreApi.Core.Application.BrandLogic;
 using StoreApi.Core.Application.ProductLogic;
@@ -8,6 +9,8 @@ namespace StoreApi.Controllers
 {
     [Route("api/brands")]
     [ApiController]
+    [Authorize]
+
     public class BrandsController : ControllerBase
     {
         private readonly IMediator mediator;

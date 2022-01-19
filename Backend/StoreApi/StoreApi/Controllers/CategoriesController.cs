@@ -1,4 +1,5 @@
 ﻿using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using StoreApi.Core.Application.CategoryLogic;
 using StoreApi.Core.Application.ProductLogic;
@@ -8,6 +9,8 @@ namespace StoreApi.Controllers
 {
     [Route("api/categories")]
     [ApiController]
+    [Authorize]
+
     public class CategoriesController : ControllerBase
     {
         private readonly IMediator mediator;

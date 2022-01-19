@@ -1,4 +1,5 @@
 ﻿using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using MongoDB.Driver;
 using StoreApi.Core.Application.ProductLogic;
@@ -10,6 +11,8 @@ namespace StoreApi.Controllers
 {
     [Route("api/products")]
     [ApiController]
+    [Authorize]
+
     public class ProductsController : ControllerBase
     {
         private readonly IMediator mediator;
