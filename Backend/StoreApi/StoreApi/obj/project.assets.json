@@ -1411,23 +1411,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\gibra\\.nuget\\packages\\": {},
+    "C:\\Users\\droue\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Pruebas\\2.0\\StoreApi\\StoreApi\\StoreApi.csproj",
+      "projectUniqueName": "C:\\Users\\droue\\Desktop\\inventario-productos\\Backend\\StoreApi\\StoreApi\\StoreApi.csproj",
       "projectName": "StoreApi",
-      "projectPath": "D:\\Pruebas\\2.0\\StoreApi\\StoreApi\\StoreApi.csproj",
-      "packagesPath": "C:\\Users\\gibra\\.nuget\\packages\\",
-      "outputPath": "D:\\Pruebas\\2.0\\StoreApi\\StoreApi\\obj\\",
+      "projectPath": "C:\\Users\\droue\\Desktop\\inventario-productos\\Backend\\StoreApi\\StoreApi\\StoreApi.csproj",
+      "packagesPath": "C:\\Users\\droue\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\droue\\Desktop\\inventario-productos\\Backend\\StoreApi\\StoreApi\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\gibra\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\droue\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -1442,8 +1442,8 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "D:\\Pruebas\\2.0\\StoreApi\\Lib.Service.Mongo\\Lib.Service.Mongo\\Lib.Service.Mongo.csproj": {
-              "projectPath": "D:\\Pruebas\\2.0\\StoreApi\\Lib.Service.Mongo\\Lib.Service.Mongo\\Lib.Service.Mongo.csproj"
+            "C:\\Users\\droue\\Desktop\\inventario-productos\\Backend\\StoreApi\\Lib.Service.Mongo\\Lib.Service.Mongo\\Lib.Service.Mongo.csproj": {
+              "projectPath": "C:\\Users\\droue\\Desktop\\inventario-productos\\Backend\\StoreApi\\Lib.Service.Mongo\\Lib.Service.Mongo\\Lib.Service.Mongo.csproj"
             }
           }
         }
