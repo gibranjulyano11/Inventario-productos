@@ -1,19 +1,25 @@
-﻿using Lib.Service.Mongo.Entities;
-using MongoDB.Bson.Serialization.Attributes;
+//using Lib.Service.Mongo.Entities;
+//using Microsoft.EntityFrameworkCore;
+//using System;
+//using System.Collections.Generic;
+//using System.ComponentModel.DataAnnotations;
+//using System.Linq;
+//using System.Threading.Tasks;
 
-namespace StoreApi.Core.Domain
-{
-    [BsonCollection("Users")]
+//namespace StoreApi.Core.Domain
+//{
+//  [BsonCollection("Usuarios")]
+//  public class User : Document
+//  {
+//        [Key]
+//        public int Id { get; set; }
 
-    public class User : Document
-    {
-        [BsonElement("UserName")]
-        public string UserName { get; set; }
-        
-        [BsonElement(nameof(Password))]
-        public string Password { get; set; }
+//        public string UserName { get; set; }
 
-        [BsonElement(nameof(Role))]
-        public string Role { get; set; }
-    }
-}
+//        public byte[] PasswordHash { get; set; }
+
+//        public byte[] PasswordSalt { get; set; }
+       
+
+//  }
+//}

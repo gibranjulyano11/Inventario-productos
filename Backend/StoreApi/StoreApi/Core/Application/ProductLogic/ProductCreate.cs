@@ -1,35 +1,37 @@
-﻿
+
 using FluentValidation;
 using Lib.Service.Mongo.Interfaces;
 using MediatR;
+using Microsoft.AspNetCore.Mvc;
 using StoreApi.Core.Domain;
 using System.Threading;
 using System.Threading.Tasks;
 
 namespace StoreApi.Core.Application.ProductLogic
 {
-    public class ProductCreate
+  public class ProductCreate
     {
         public class ProductCreateCommand : IRequest<string>
         {
-            public string ProductId { get; set; }
-            public string ProductName { get; set; }
-            public string ProductCode { get; set; }
-            public decimal ProductPrice { get; set; }
-            public string ProductCategory { get; set; }
-            public string ProductBrand { get; set; }
-
+            public string Id { get; set; }
+            public string Name { get; set; }
+            public string Code { get; set; }
+            public string Price { get; set; }
+            public string Category { get; set; }
+            public string Brand { get; set; }
+            public string Attribute { get; set; }
         }
 
         public class ProductCreateValidator : AbstractValidator<ProductCreateCommand>
         {
             public ProductCreateValidator()
             {
-                RuleFor(x => x.ProductName).NotEmpty().NotNull();
-                RuleFor(x => x.ProductCode).NotEmpty().NotNull().WithMessage("Error, el producto necesita un código");
-                RuleFor(x => x.ProductPrice).NotEmpty().NotNull().WithMessage("Error, el producto necesita precio");
-                RuleFor(x => x.ProductCategory).NotEmpty().NotNull().WithMessage("Error, el producto necesita una categoría");
-                RuleFor(x => x.ProductBrand).NotEmpty().NotNull().WithMessage("Error, el producto necesita una marca");
+                RuleFor(x => x.Name).NotEmpty().NotNull();
+                RuleFor(x => x.Code).NotEmpty().NotNull().WithMessage("Error, el producto necesita un código");
+                RuleFor(x => x.Price).NotEmpty().NotNull().WithMessage("Error, el producto necesita precio");
+                RuleFor(x => x.Category).NotEmpty().NotNull().WithMessage("Error, el producto necesita una categoría");
+                RuleFor(x => x.Brand).NotEmpty().NotNull().WithMessage("Error, el producto necesita una marca");
+                RuleFor(x => x.Attribute).NotEmpty().NotNull().WithMessage("Error, el producto necesita un atributo");
             }
         }
 
@@ -48,15 +50,16 @@ namespace StoreApi.Core.Application.ProductLogic
                 {
                     await dbProduct.InsertDocument(new Product
                     {
-                        Name = request.ProductName,
-                        Code = request.ProductCode,
-                        Price = request.ProductPrice,
-                        Category = request.ProductCategory,
-                        Brand = request.ProductBrand,
+                        Name = request.Name,
+                        Code = request.Code,
+                        Price = request.Price,
+                        Category = request.Category,
+                        Brand = request.Brand,
+                        Attribute = request.Attribute,
                     });
 
 
-                    return $"El producto {request.ProductName} fue insertado exitosamente";
+                    return $"El producto {request.Name} fue insertado exitosamente";
                 }
                 catch (System.Exception ex)
                 {

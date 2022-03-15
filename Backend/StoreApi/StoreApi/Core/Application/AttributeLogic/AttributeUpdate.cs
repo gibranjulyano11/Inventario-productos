@@ -12,16 +12,16 @@ namespace StoreApi.Core.Application.ProductLogic
     {
         public class AttributeUpdateCommand : IRequest<string>
         {
-            public string AttributeId { get; set; }
-            public string AttributeName { get; set; }
+            public string Id { get; set; }
+            public string Name { get; set; }
 
         }
         public class AttributeUpdateValidator : AbstractValidator<AttributeUpdateCommand>
         {
             public AttributeUpdateValidator()
             {
-                RuleFor(x => x.AttributeId).NotEmpty().NotNull();
-                RuleFor(x => x.AttributeName).NotEmpty().NotNull().WithMessage("Error, el producto necesita un código");
+                RuleFor(x => x.Id).NotEmpty().NotNull();
+                RuleFor(x => x.Name).NotEmpty().NotNull().WithMessage("Error, el producto necesita un código");
             }
         }
         public class AttributeUpdateHandler : IRequestHandler<AttributeUpdateCommand, string>
@@ -39,12 +39,12 @@ namespace StoreApi.Core.Application.ProductLogic
                 {
                     await dbProduct.UpdateReplaceDocument(new Attribute
                     {
-                        Id = request.AttributeId,
-                        Name = request.AttributeName,
+                        Id = request.Id,
+                        Name = request.Name,
                     });
 
 
-                    return $"El Atributo {request.AttributeName} fue actualizado exitosamente";
+                    return $"El Atributo {request.Name} fue actualizado exitosamente";
                 }
                 catch (System.Exception ex)
                 {

@@ -11,15 +11,15 @@ namespace StoreApi.Core.Application.AttributeLogic
     {
         public class AttributeCreateCommand : IRequest<string>
         {
-            public string AttributeId { get; set; }
-            public string AttributeName { get; set; }
+            public string Id { get; set; }
+            public string Name { get; set; }
         }
 
         public class AttributeCreateValidator : AbstractValidator<AttributeCreateCommand>
         {
             public AttributeCreateValidator()
             {
-                RuleFor(x => x.AttributeName).NotEmpty().NotNull().WithMessage("Error, ingrese el nombre de una etiqueta");
+                RuleFor(x => x.Name).NotEmpty().NotNull().WithMessage("Error, ingrese el nombre de una etiqueta");
             }
         }
 
@@ -38,11 +38,11 @@ namespace StoreApi.Core.Application.AttributeLogic
                 {
                     await dbProduct.InsertDocument(new Attribute
                     {
-                        Name = request.AttributeName,
+                        Name = request.Name,
                     });
 
 
-                    return $"El atributo {request.AttributeName} fue insertado exitosamente";
+                    return $"El atributo {request.Name} fue insertado exitosamente";
                 }
                 catch (System.Exception ex)
                 {

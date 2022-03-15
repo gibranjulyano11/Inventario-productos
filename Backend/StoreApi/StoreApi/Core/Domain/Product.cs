@@ -1,9 +1,9 @@
-﻿using Lib.Service.Mongo.Entities;
+using Lib.Service.Mongo.Entities;
 using MongoDB.Bson.Serialization.Attributes;
 
 namespace StoreApi.Core.Domain
 {
-    [BsonCollection("Procts")]
+    [BsonCollection("Producto")]
     public class Product : Document
     {
         [BsonElement("Name")]
@@ -13,7 +13,7 @@ namespace StoreApi.Core.Domain
         public string Code { get; set; }
 
         [BsonElement(nameof(Price))]
-        public decimal Price { get; set; }
+        public string Price { get; set; }
 
         [BsonElement(nameof(Category))]
         public string Category { get; set; }
@@ -21,6 +21,7 @@ namespace StoreApi.Core.Domain
         [BsonElement(nameof(Brand))]
         public string Brand { get; set; }
 
+        [BsonElement(nameof(Attribute))]
+        public string Attribute { get; set; }
     }
-
 }

@@ -12,16 +12,16 @@ namespace StoreApi.Core.Application.ProductLogic
     {
         public class BrandUpdateCommand : IRequest<string>
         {
-            public string BrandId { get; set; }
-            public string BrandName { get; set; }
+            public string Id { get; set; }
+            public string Name { get; set; }
 
         }
         public class BrandUpdateValidator : AbstractValidator<BrandUpdateCommand>
         {
             public BrandUpdateValidator()
             {
-                RuleFor(x => x.BrandId).NotEmpty().NotNull();
-                RuleFor(x => x.BrandName).NotEmpty().NotNull().WithMessage("Error, el producto necesita un código");
+                RuleFor(x => x.Id).NotEmpty().NotNull();
+                RuleFor(x => x.Name).NotEmpty().NotNull().WithMessage("Error, el producto necesita un código");
             }
         }
         public class BrandUpdateHandler : IRequestHandler<BrandUpdateCommand, string>
@@ -39,12 +39,12 @@ namespace StoreApi.Core.Application.ProductLogic
                 {
                     await dbProduct.UpdateReplaceDocument(new Brand
                     {
-                        Id = request.BrandId,
-                        Name = request.BrandName,
+                        Id = request.Id,
+                        Name = request.Name,
 
                     });
 
-                    return $"La Marca {request.BrandName} fue actualizada exitosamente";
+                    return $"La Marca {request.Name} fue actualizada exitosamente";
                 }
                 catch (System.Exception ex)
                 {

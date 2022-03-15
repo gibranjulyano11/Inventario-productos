@@ -1,58 +1,98 @@
-﻿using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Configuration;
-using StoreApi.Core.Domain;
-using StoreApi.Helpers;
-using System.Collections.Generic;
+//using StoreApi.Core.Domain;
+//using StoreApi.Core.Repositorio;
+//using Microsoft.AspNetCore.Http;
+//using Microsoft.AspNetCore.Mvc;
+//using System;
+//using System.Collections.Generic;
+//using System.Linq;
+//using System.Threading.Tasks;
 
-namespace StoreApi.Controllers
-{
-    [ApiController]
-    [Route("api/users")]
-    [Authorize]
+//namespace StoreApi.Controllers
+//{
+//    [Route("api/[controller]")]
+//    [ApiController]
+//    public class UsersController : ControllerBase
+//    {
 
-    public class UsersController : ControllerBase
-    {
-        private readonly IConfiguration conf;
+//        private readonly IUserRepositorio _userRepositorio;
+//        protected ResponseDto _response;
 
-        public UsersController(IConfiguration config)
-        {
-            conf = config;
-        }
+//        public UsersController(IUserRepositorio userRepositorio)
+//        {
+//            _userRepositorio = userRepositorio;
+//            _response = new ResponseDto();
+//        }
 
 
-        [HttpGet]
-        public IEnumerable<object> GetAll()
-        {
-            var usuarios = new List<object>(){
-                new {
-                    nombre = "Crico Mosquera",
-                    rol = "Admin"
-                },
-                new {
-                    nombre = "Ashor Nsr",
-                    rol = "Empleado"
-                },
-            };
+//        [HttpPost("Register")]
+//        public async Task<ActionResult> Register(UserDto user)
+//        {
+//            var respuesta = await _userRepositorio.Register(
+//                    new User
+//                    {
+//                        UserName = user.UserName
+//                    }, user.Password);
 
-            return usuarios;
-        }
+//            if(respuesta == "existe")
+//            {
+//                _response.IsSuccess = false;
+//                _response.DisplayMessage = "Usuario ya Existe";
+//                return BadRequest(_response);
+//            }
 
-        [HttpPost]
-        [AllowAnonymous]
-        public ActionResult<object> Login([FromBody] User user)
-        {
-            string secret = this.conf.GetValue<string>("Secret");
-            var jwtHelper = new JWTHelper(secret);
-            var token = jwtHelper.CreateToken(user.UserName);
+//            if(respuesta == "error")
+//            {
+//                _response.IsSuccess = false;
+//                _response.DisplayMessage = "Error al Crear el Usuario";
+//                return BadRequest(_response);
+//            }
 
-            return Ok(new
-            {
-                ok = true,
-                msg = "Has iniciado sesión exitosamente",
-                token
-            });
-        }
-    }
-}
+//            _response.DisplayMessage = "Usuario Creado con Exito!";
+//            //_response.Result = respuesta;
+//            JwTPackage jtp = new JwTPackage();
+//            jtp.UserName = user.UserName;
+//            jtp.Token = respuesta;
+//            _response.Result = jtp;
+
+
+//            return Ok(_response);
+//        }
+
+
+//        [HttpPost("Login")]
+//        public async Task<ActionResult> Login(UserDto user)
+//        {
+//            var respuesta = await _userRepositorio.Login(user.UserName, user.Password);
+
+//            if (respuesta == "nouser")
+//            {
+//                _response.IsSuccess = false;
+//                _response.DisplayMessage = "Usuario no Existe";
+//                return BadRequest(_response);
+//            }
+//            if (respuesta == "wrongpassword")
+//            {
+//                _response.IsSuccess = false;
+//                _response.DisplayMessage = "Password Incorrecta";
+//                return BadRequest(_response);
+//            }
+
+//            //_response.Result = respuesta;
+//            JwTPackage jtp = new JwTPackage();
+//            jtp.UserName = user.UserName;
+//            jtp.Token = respuesta;
+//            _response.Result = jtp;
+
+//            _response.DisplayMessage = "Usuario Conectado";
+//            return Ok(_response);
+//        }
+
+//    }
+
+//    public class JwTPackage
+//    {
+//        public string UserName { get; set; }
+//        public string Token { get; set; }
+//    }
+
+//}

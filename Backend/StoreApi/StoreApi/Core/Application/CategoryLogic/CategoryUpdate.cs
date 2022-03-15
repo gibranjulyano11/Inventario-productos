@@ -12,16 +12,16 @@ namespace StoreApi.Core.Application.ProductLogic
     {
         public class CategoryUpdateCommand : IRequest<string>
         {
-            public string CategoryId { get; set; }
-            public string CategoryName { get; set; }
+            public string Id { get; set; }
+            public string Name { get; set; }
 
         }
         public class CategoryUpdateValidator : AbstractValidator<CategoryUpdateCommand>
         {
             public CategoryUpdateValidator()
             {
-                RuleFor(x => x.CategoryId).NotEmpty().NotNull();
-                RuleFor(x => x.CategoryName).NotEmpty().NotNull().WithMessage("Error, el producto necesita un código");
+                RuleFor(x => x.Id).NotEmpty().NotNull();
+                RuleFor(x => x.Name).NotEmpty().NotNull().WithMessage("Error, el producto necesita un código");
             }
         }
         public class CategoryUpdateHandler : IRequestHandler<CategoryUpdateCommand, string>
@@ -39,12 +39,12 @@ namespace StoreApi.Core.Application.ProductLogic
                 {
                     await dbProduct.UpdateReplaceDocument(new Category
                     {
-                        Id = request.CategoryId,
-                        Name = request.CategoryName,
+                        Id = request.Id,
+                        Name = request.Name,
                     });
 
 
-                    return $"La Categoria {request.CategoryName} fue actualizada exitosamente";
+                    return $"La Categoria {request.Name} fue actualizada exitosamente";
                 }
                 catch (System.Exception ex)
                 {

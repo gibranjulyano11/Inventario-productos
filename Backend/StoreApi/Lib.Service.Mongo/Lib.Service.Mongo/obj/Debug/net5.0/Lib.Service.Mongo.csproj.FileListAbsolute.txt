@@ -46,15 +46,69 @@ C:\Users\gibra\source\repos\StoreApi\Lib.Service.Mongo\Lib.Service.Mongo\obj\Deb
 C:\Users\gibra\source\repos\StoreApi\Lib.Service.Mongo\Lib.Service.Mongo\obj\Debug\net5.0\Lib.Service.Mongo.dll
 C:\Users\gibra\source\repos\StoreApi\Lib.Service.Mongo\Lib.Service.Mongo\obj\Debug\net5.0\ref\Lib.Service.Mongo.dll
 C:\Users\gibra\source\repos\StoreApi\Lib.Service.Mongo\Lib.Service.Mongo\obj\Debug\net5.0\Lib.Service.Mongo.pdb
-C:\Users\droue\Desktop\inventario-productos\Backend\StoreApi\Lib.Service.Mongo\Lib.Service.Mongo\bin\Debug\net5.0\Lib.Service.Mongo.deps.json
-C:\Users\droue\Desktop\inventario-productos\Backend\StoreApi\Lib.Service.Mongo\Lib.Service.Mongo\bin\Debug\net5.0\Lib.Service.Mongo.dll
-C:\Users\droue\Desktop\inventario-productos\Backend\StoreApi\Lib.Service.Mongo\Lib.Service.Mongo\bin\Debug\net5.0\ref\Lib.Service.Mongo.dll
-C:\Users\droue\Desktop\inventario-productos\Backend\StoreApi\Lib.Service.Mongo\Lib.Service.Mongo\bin\Debug\net5.0\Lib.Service.Mongo.pdb
-C:\Users\droue\Desktop\inventario-productos\Backend\StoreApi\Lib.Service.Mongo\Lib.Service.Mongo\obj\Debug\net5.0\Lib.Service.Mongo.csproj.AssemblyReference.cache
-C:\Users\droue\Desktop\inventario-productos\Backend\StoreApi\Lib.Service.Mongo\Lib.Service.Mongo\obj\Debug\net5.0\Lib.Service.Mongo.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\droue\Desktop\inventario-productos\Backend\StoreApi\Lib.Service.Mongo\Lib.Service.Mongo\obj\Debug\net5.0\Lib.Service.Mongo.AssemblyInfoInputs.cache
-C:\Users\droue\Desktop\inventario-productos\Backend\StoreApi\Lib.Service.Mongo\Lib.Service.Mongo\obj\Debug\net5.0\Lib.Service.Mongo.AssemblyInfo.cs
-C:\Users\droue\Desktop\inventario-productos\Backend\StoreApi\Lib.Service.Mongo\Lib.Service.Mongo\obj\Debug\net5.0\Lib.Service.Mongo.csproj.CoreCompileInputs.cache
-C:\Users\droue\Desktop\inventario-productos\Backend\StoreApi\Lib.Service.Mongo\Lib.Service.Mongo\obj\Debug\net5.0\Lib.Service.Mongo.dll
-C:\Users\droue\Desktop\inventario-productos\Backend\StoreApi\Lib.Service.Mongo\Lib.Service.Mongo\obj\Debug\net5.0\ref\Lib.Service.Mongo.dll
-C:\Users\droue\Desktop\inventario-productos\Backend\StoreApi\Lib.Service.Mongo\Lib.Service.Mongo\obj\Debug\net5.0\Lib.Service.Mongo.pdb
+C:\Users\droue\Downloads\StoreApi\Lib.Service.Mongo\Lib.Service.Mongo\bin\Debug\net5.0\Lib.Service.Mongo.deps.json
+C:\Users\droue\Downloads\StoreApi\Lib.Service.Mongo\Lib.Service.Mongo\bin\Debug\net5.0\Lib.Service.Mongo.dll
+C:\Users\droue\Downloads\StoreApi\Lib.Service.Mongo\Lib.Service.Mongo\bin\Debug\net5.0\ref\Lib.Service.Mongo.dll
+C:\Users\droue\Downloads\StoreApi\Lib.Service.Mongo\Lib.Service.Mongo\bin\Debug\net5.0\Lib.Service.Mongo.pdb
+C:\Users\droue\Downloads\StoreApi\Lib.Service.Mongo\Lib.Service.Mongo\obj\Debug\net5.0\Lib.Service.Mongo.csproj.AssemblyReference.cache
+C:\Users\droue\Downloads\StoreApi\Lib.Service.Mongo\Lib.Service.Mongo\obj\Debug\net5.0\Lib.Service.Mongo.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\droue\Downloads\StoreApi\Lib.Service.Mongo\Lib.Service.Mongo\obj\Debug\net5.0\Lib.Service.Mongo.AssemblyInfoInputs.cache
+C:\Users\droue\Downloads\StoreApi\Lib.Service.Mongo\Lib.Service.Mongo\obj\Debug\net5.0\Lib.Service.Mongo.AssemblyInfo.cs
+C:\Users\droue\Downloads\StoreApi\Lib.Service.Mongo\Lib.Service.Mongo\obj\Debug\net5.0\Lib.Service.Mongo.csproj.CoreCompileInputs.cache
+C:\Users\droue\Downloads\StoreApi\Lib.Service.Mongo\Lib.Service.Mongo\obj\Debug\net5.0\Lib.Service.Mongo.dll
+C:\Users\droue\Downloads\StoreApi\Lib.Service.Mongo\Lib.Service.Mongo\obj\Debug\net5.0\ref\Lib.Service.Mongo.dll
+C:\Users\droue\Downloads\StoreApi\Lib.Service.Mongo\Lib.Service.Mongo\obj\Debug\net5.0\Lib.Service.Mongo.pdb
+C:\Users\gibra\Downloads\Ashor back\Lib.Service.Mongo\Lib.Service.Mongo\bin\Debug\net5.0\Lib.Service.Mongo.deps.json
+C:\Users\gibra\Downloads\Ashor back\Lib.Service.Mongo\Lib.Service.Mongo\bin\Debug\net5.0\Lib.Service.Mongo.dll
+C:\Users\gibra\Downloads\Ashor back\Lib.Service.Mongo\Lib.Service.Mongo\bin\Debug\net5.0\ref\Lib.Service.Mongo.dll
+C:\Users\gibra\Downloads\Ashor back\Lib.Service.Mongo\Lib.Service.Mongo\bin\Debug\net5.0\Lib.Service.Mongo.pdb
+C:\Users\gibra\Downloads\Ashor back\Lib.Service.Mongo\Lib.Service.Mongo\obj\Debug\net5.0\Lib.Service.Mongo.csproj.AssemblyReference.cache
+C:\Users\gibra\Downloads\Ashor back\Lib.Service.Mongo\Lib.Service.Mongo\obj\Debug\net5.0\Lib.Service.Mongo.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\gibra\Downloads\Ashor back\Lib.Service.Mongo\Lib.Service.Mongo\obj\Debug\net5.0\Lib.Service.Mongo.AssemblyInfoInputs.cache
+C:\Users\gibra\Downloads\Ashor back\Lib.Service.Mongo\Lib.Service.Mongo\obj\Debug\net5.0\Lib.Service.Mongo.AssemblyInfo.cs
+C:\Users\gibra\Downloads\Ashor back\Lib.Service.Mongo\Lib.Service.Mongo\obj\Debug\net5.0\Lib.Service.Mongo.csproj.CoreCompileInputs.cache
+C:\Users\gibra\Downloads\Ashor back\Lib.Service.Mongo\Lib.Service.Mongo\obj\Debug\net5.0\Lib.Service.Mongo.dll
+C:\Users\gibra\Downloads\Ashor back\Lib.Service.Mongo\Lib.Service.Mongo\obj\Debug\net5.0\ref\Lib.Service.Mongo.dll
+C:\Users\gibra\Downloads\Ashor back\Lib.Service.Mongo\Lib.Service.Mongo\obj\Debug\net5.0\Lib.Service.Mongo.pdb
+C:\Users\droue\Downloads\api\Ashor back\Lib.Service.Mongo\Lib.Service.Mongo\bin\Debug\net5.0\Lib.Service.Mongo.deps.json
+C:\Users\droue\Downloads\api\Ashor back\Lib.Service.Mongo\Lib.Service.Mongo\bin\Debug\net5.0\Lib.Service.Mongo.dll
+C:\Users\droue\Downloads\api\Ashor back\Lib.Service.Mongo\Lib.Service.Mongo\bin\Debug\net5.0\ref\Lib.Service.Mongo.dll
+C:\Users\droue\Downloads\api\Ashor back\Lib.Service.Mongo\Lib.Service.Mongo\bin\Debug\net5.0\Lib.Service.Mongo.pdb
+C:\Users\droue\Downloads\api\Ashor back\Lib.Service.Mongo\Lib.Service.Mongo\obj\Debug\net5.0\Lib.Service.Mongo.csproj.AssemblyReference.cache
+C:\Users\droue\Downloads\api\Ashor back\Lib.Service.Mongo\Lib.Service.Mongo\obj\Debug\net5.0\Lib.Service.Mongo.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\droue\Downloads\api\Ashor back\Lib.Service.Mongo\Lib.Service.Mongo\obj\Debug\net5.0\Lib.Service.Mongo.AssemblyInfoInputs.cache
+C:\Users\droue\Downloads\api\Ashor back\Lib.Service.Mongo\Lib.Service.Mongo\obj\Debug\net5.0\Lib.Service.Mongo.AssemblyInfo.cs
+C:\Users\droue\Downloads\api\Ashor back\Lib.Service.Mongo\Lib.Service.Mongo\obj\Debug\net5.0\Lib.Service.Mongo.csproj.CoreCompileInputs.cache
+C:\Users\droue\Downloads\api\Ashor back\Lib.Service.Mongo\Lib.Service.Mongo\obj\Debug\net5.0\Lib.Service.Mongo.dll
+C:\Users\droue\Downloads\api\Ashor back\Lib.Service.Mongo\Lib.Service.Mongo\obj\Debug\net5.0\ref\Lib.Service.Mongo.dll
+C:\Users\droue\Downloads\api\Ashor back\Lib.Service.Mongo\Lib.Service.Mongo\obj\Debug\net5.0\Lib.Service.Mongo.pdb
+C:\Users\droue\Downloads\api\Ashor back\Lib.Service.Mongo\Lib.Service.Mongo\bin\Debug\net5.0\Microsoft.Azure.Documents.ServiceInterop.dll
+C:\Users\droue\Downloads\api\Ashor back\Lib.Service.Mongo\Lib.Service.Mongo\bin\Debug\net5.0\Cosmos.CRTCompat.dll
+C:\Users\gibra\Downloads\Proyecto\Back-end\Lib.Service.Mongo\Lib.Service.Mongo\bin\Debug\net5.0\Microsoft.Azure.Documents.ServiceInterop.dll
+C:\Users\gibra\Downloads\Proyecto\Back-end\Lib.Service.Mongo\Lib.Service.Mongo\bin\Debug\net5.0\Cosmos.CRTCompat.dll
+C:\Users\gibra\Downloads\Proyecto\Back-end\Lib.Service.Mongo\Lib.Service.Mongo\bin\Debug\net5.0\Lib.Service.Mongo.deps.json
+C:\Users\gibra\Downloads\Proyecto\Back-end\Lib.Service.Mongo\Lib.Service.Mongo\bin\Debug\net5.0\Lib.Service.Mongo.dll
+C:\Users\gibra\Downloads\Proyecto\Back-end\Lib.Service.Mongo\Lib.Service.Mongo\bin\Debug\net5.0\ref\Lib.Service.Mongo.dll
+C:\Users\gibra\Downloads\Proyecto\Back-end\Lib.Service.Mongo\Lib.Service.Mongo\bin\Debug\net5.0\Lib.Service.Mongo.pdb
+C:\Users\gibra\Downloads\Proyecto\Back-end\Lib.Service.Mongo\Lib.Service.Mongo\obj\Debug\net5.0\Lib.Service.Mongo.csproj.AssemblyReference.cache
+C:\Users\gibra\Downloads\Proyecto\Back-end\Lib.Service.Mongo\Lib.Service.Mongo\obj\Debug\net5.0\Lib.Service.Mongo.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\gibra\Downloads\Proyecto\Back-end\Lib.Service.Mongo\Lib.Service.Mongo\obj\Debug\net5.0\Lib.Service.Mongo.AssemblyInfoInputs.cache
+C:\Users\gibra\Downloads\Proyecto\Back-end\Lib.Service.Mongo\Lib.Service.Mongo\obj\Debug\net5.0\Lib.Service.Mongo.AssemblyInfo.cs
+C:\Users\gibra\Downloads\Proyecto\Back-end\Lib.Service.Mongo\Lib.Service.Mongo\obj\Debug\net5.0\Lib.Service.Mongo.csproj.CoreCompileInputs.cache
+C:\Users\gibra\Downloads\Proyecto\Back-end\Lib.Service.Mongo\Lib.Service.Mongo\obj\Debug\net5.0\Lib.Service.Mongo.dll
+C:\Users\gibra\Downloads\Proyecto\Back-end\Lib.Service.Mongo\Lib.Service.Mongo\obj\Debug\net5.0\ref\Lib.Service.Mongo.dll
+C:\Users\gibra\Downloads\Proyecto\Back-end\Lib.Service.Mongo\Lib.Service.Mongo\obj\Debug\net5.0\Lib.Service.Mongo.pdb
+C:\Users\droue\Desktop\Back-end\Lib.Service.Mongo\Lib.Service.Mongo\bin\Debug\net5.0\Microsoft.Azure.Documents.ServiceInterop.dll
+C:\Users\droue\Desktop\Back-end\Lib.Service.Mongo\Lib.Service.Mongo\bin\Debug\net5.0\Cosmos.CRTCompat.dll
+C:\Users\droue\Desktop\Back-end\Lib.Service.Mongo\Lib.Service.Mongo\bin\Debug\net5.0\Lib.Service.Mongo.deps.json
+C:\Users\droue\Desktop\Back-end\Lib.Service.Mongo\Lib.Service.Mongo\bin\Debug\net5.0\Lib.Service.Mongo.dll
+C:\Users\droue\Desktop\Back-end\Lib.Service.Mongo\Lib.Service.Mongo\bin\Debug\net5.0\ref\Lib.Service.Mongo.dll
+C:\Users\droue\Desktop\Back-end\Lib.Service.Mongo\Lib.Service.Mongo\bin\Debug\net5.0\Lib.Service.Mongo.pdb
+C:\Users\droue\Desktop\Back-end\Lib.Service.Mongo\Lib.Service.Mongo\obj\Debug\net5.0\Lib.Service.Mongo.csproj.AssemblyReference.cache
+C:\Users\droue\Desktop\Back-end\Lib.Service.Mongo\Lib.Service.Mongo\obj\Debug\net5.0\Lib.Service.Mongo.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\droue\Desktop\Back-end\Lib.Service.Mongo\Lib.Service.Mongo\obj\Debug\net5.0\Lib.Service.Mongo.AssemblyInfoInputs.cache
+C:\Users\droue\Desktop\Back-end\Lib.Service.Mongo\Lib.Service.Mongo\obj\Debug\net5.0\Lib.Service.Mongo.AssemblyInfo.cs
+C:\Users\droue\Desktop\Back-end\Lib.Service.Mongo\Lib.Service.Mongo\obj\Debug\net5.0\Lib.Service.Mongo.csproj.CoreCompileInputs.cache
+C:\Users\droue\Desktop\Back-end\Lib.Service.Mongo\Lib.Service.Mongo\obj\Debug\net5.0\Lib.Service.Mongo.dll
+C:\Users\droue\Desktop\Back-end\Lib.Service.Mongo\Lib.Service.Mongo\obj\Debug\net5.0\ref\Lib.Service.Mongo.dll
+C:\Users\droue\Desktop\Back-end\Lib.Service.Mongo\Lib.Service.Mongo\obj\Debug\net5.0\Lib.Service.Mongo.pdb

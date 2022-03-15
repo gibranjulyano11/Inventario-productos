@@ -1,16 +1,15 @@
-﻿using MediatR;
-using Microsoft.AspNetCore.Authorization;
+using MediatR;
 using Microsoft.AspNetCore.Mvc;
+using MongoDB.Driver;
 using StoreApi.Core.Application.ProductLogic;
 using StoreApi.Core.Application.TagLogic;
+using StoreApi.Core.Domain;
 using System.Threading.Tasks;
 
 namespace StoreApi.Controllers
 {
     [Route("api/tags")]
     [ApiController]
-    [Authorize]
-
     public class TagsController : ControllerBase
     {
         private readonly IMediator mediator;
@@ -31,6 +30,13 @@ namespace StoreApi.Controllers
         {
             return Ok(await mediator.Send(new TagGet()));
         }
+
+        //[HttpGet("{id}")]
+        //public async Task<ActionResult<Tag>> Get(string Id)
+        //{
+        //    var filter = Builders<Tag>.Filter.Eq(doc => doc.Id, Id);
+        //    return Ok(await mediator.Send(new TagGet()));
+        //}
 
         [HttpDelete("{id}")]
         public async Task<ActionResult> Delete(string id)

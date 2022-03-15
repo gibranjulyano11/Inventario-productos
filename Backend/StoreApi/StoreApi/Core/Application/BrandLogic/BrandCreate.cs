@@ -11,15 +11,15 @@ namespace StoreApi.Core.Application.BrandLogic
     {
         public class BrandCreateCommand : IRequest<string>
         {
-            public string BrandId { get; set; }
-            public string BrandName { get; set; }
+            public string Id { get; set; }
+            public string Name { get; set; }
         }
 
         public class BrandCreateValidator : AbstractValidator<BrandCreateCommand>
         {
             public BrandCreateValidator()
             {
-                RuleFor(x => x.BrandName).NotEmpty().NotNull().WithMessage("Error, ingrese el nombre de una marca");
+                RuleFor(x => x.Name).NotEmpty().NotNull().WithMessage("Error, ingrese el nombre de una marca");
             }
         }
 
@@ -38,11 +38,11 @@ namespace StoreApi.Core.Application.BrandLogic
                 {
                     await dbProduct.InsertDocument(new Brand
                     {
-                        Name = request.BrandName,
+                        Name = request.Name,
                     });
 
 
-                    return $"La marca {request.BrandName} fue insertada exitosamente";
+                    return $"La marca {request.Name} fue insertada exitosamente";
                 }
                 catch (System.Exception ex)
                 {

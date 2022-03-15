@@ -1,5 +1,7 @@
-﻿using Lib.Service.Mongo.Entities;
+using Lib.Service.Mongo.Entities;
+using Microsoft.Azure.Documents;
 using MongoDB.Driver;
+using System;
 using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
@@ -21,6 +23,5 @@ namespace Lib.Service.Mongo.Interfaces
         Task DeleteById(string Id, CancellationToken cancellationToken = default);
 
         Task<PaginationEntity<TDocument>> GetByPagination(PaginationEntity<TDocument> pagination, FilterDefinition<TDocument> filter, CancellationToken cancellationToken);
-
-    }
+  }
 }

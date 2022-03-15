@@ -1,6 +1,7 @@
-﻿using Lib.Service.Mongo.Context;
+using Lib.Service.Mongo.Context;
 using Lib.Service.Mongo.Entities;
 using Lib.Service.Mongo.Interfaces;
+using Microsoft.Azure.Documents;
 using Microsoft.Extensions.Options;
 using MongoDB.Bson.Serialization.Conventions;
 using MongoDB.Driver;
@@ -17,7 +18,7 @@ namespace Lib.Service.Mongo
         public readonly IMongoCollection<TDocument> collection;
         public readonly MongoClient client;
 
-        private protected static string GetCollectionName(Type documentType)
+    private protected static string GetCollectionName(Type documentType)
         {
             return ((BsonCollectionAttribute)documentType.GetCustomAttributes(typeof(BsonCollectionAttribute), true).FirstOrDefault()).CollectionName;
         }
@@ -146,7 +147,5 @@ namespace Lib.Service.Mongo
 
             return pagination;
         }
-
-
     }
 }

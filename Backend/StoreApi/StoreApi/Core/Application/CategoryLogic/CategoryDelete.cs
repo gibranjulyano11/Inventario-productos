@@ -1,4 +1,4 @@
-﻿using FluentValidation;
+using FluentValidation;
 using Lib.Service.Mongo.Interfaces;
 using MediatR;
 using StoreApi.Core.Domain;
@@ -40,7 +40,7 @@ namespace StoreApi.Core.Application.CategoryLogic
 
                     return true;
                 }
-                catch (Exception ex)
+                catch (Exception)
                 {
                     return false;
                 }

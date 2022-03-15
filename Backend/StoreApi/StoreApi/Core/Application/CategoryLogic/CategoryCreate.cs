@@ -1,4 +1,4 @@
-﻿using FluentValidation;
+using FluentValidation;
 using Lib.Service.Mongo.Interfaces;
 using MediatR;
 using StoreApi.Core.Domain;
@@ -11,15 +11,15 @@ namespace StoreApi.Core.Application.CategoryLogic
     {
         public class CategoryCreateCommand : IRequest<string>
         {
-            public string CategoryId { get; set; }
-            public string CategoryName { get; set; }
+            public string Id { get; set; }
+            public string Name { get; set; }
         }
 
         public class CategoryCreateValidator : AbstractValidator<CategoryCreateCommand>
         {
             public CategoryCreateValidator()
             {
-                RuleFor(x => x.CategoryName).NotEmpty().NotNull().WithMessage("Error, ingrese el nombre de una categoría");
+                RuleFor(x => x.Name).NotEmpty().NotNull().WithMessage("Error, ingrese el nombre de una categoría");
             }
         }
 
@@ -38,11 +38,11 @@ namespace StoreApi.Core.Application.CategoryLogic
                 {
                     await dbProduct.InsertDocument(new Category
                     {
-                        Name = request.CategoryName,
+                        Name = request.Name,
                     });
 
 
-                    return $"La categoría {request.CategoryName} fue insertada exitosamente";
+                    return $"La categoría {request.Name} fue insertada exitosamente";
                 }
                 catch (System.Exception ex)
                 {

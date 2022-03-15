@@ -1,4 +1,4 @@
-﻿using Lib.Service.Mongo.Interfaces;
+using Lib.Service.Mongo.Interfaces;
 using MediatR;
 using StoreApi.Core.Domain;
 using System.Collections.Generic;

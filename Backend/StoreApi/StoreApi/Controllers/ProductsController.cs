@@ -1,18 +1,14 @@
-﻿using MediatR;
-using Microsoft.AspNetCore.Authorization;
+using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using MongoDB.Driver;
 using StoreApi.Core.Application.ProductLogic;
-using System.Threading;
+using StoreApi.Core.Domain;
 using System.Threading.Tasks;
-using static StoreApi.Core.Application.ProductLogic.ProductGet;
 
 namespace StoreApi.Controllers
 {
     [Route("api/products")]
     [ApiController]
-    [Authorize]
-
     public class ProductsController : ControllerBase
     {
         private readonly IMediator mediator;
@@ -22,8 +18,9 @@ namespace StoreApi.Controllers
             this.mediator = mediator;
         }
 
+
         [HttpPost]
-        public async Task<ActionResult<string>> Create(ProductCreate.ProductCreateCommand command)
+        public async Task<ActionResult<Product>> Create(ProductCreate.ProductCreateCommand command)
         {
             return Ok(await mediator.Send(command));
         }
@@ -33,13 +30,19 @@ namespace StoreApi.Controllers
         {
             return Ok(await mediator.Send(new ProductGet()));
         }
+        [HttpGet("{id}")]
+        public async Task<ActionResult<Product>> Get(string Id) 
+        {
+            var filter = Builders<Product>.Filter.Eq(doc => doc.Id, Id);
+            return Ok(await mediator.Send(new ProductGet()));
+        }
 
         [HttpDelete("{id}")]
-        public async Task<ActionResult> Delete(string id)
+        public async Task<ActionResult> Delete(string Id)
         {
             return Ok(await mediator.Send(new ProductDelete.ProductDeleteCommand
             {
-                id = id
+              Id = Id
             }));
         }
 

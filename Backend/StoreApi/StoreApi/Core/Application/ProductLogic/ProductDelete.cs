@@ -1,6 +1,7 @@
-﻿using FluentValidation;
+using FluentValidation;
 using Lib.Service.Mongo.Interfaces;
 using MediatR;
+using Microsoft.AspNetCore.Components;
 using StoreApi.Core.Domain;
 using System;
 using System.Threading;
@@ -8,18 +9,18 @@ using System.Threading.Tasks;
 
 namespace StoreApi.Core.Application.ProductLogic
 {
-    public class ProductDelete
+  public class ProductDelete
     {
         public class ProductDeleteCommand : IRequest<bool>
         {
-            public string id { get; set; }
+            public string Id { get; set; }
         }
 
         public class ProductDeleteValidator : AbstractValidator<ProductDeleteCommand>
         {
             public ProductDeleteValidator()
             {
-                RuleFor(x => x.id).NotNull().WithMessage("El producto se eliminó exitosamente"); ;
+                RuleFor(x => x.Id).NotNull().WithMessage("El producto se eliminó exitosamente"); ;
             }
         }
 
@@ -36,7 +37,7 @@ namespace StoreApi.Core.Application.ProductLogic
             {
                 try
                 {
-                    await dbProduct.DeleteById(request.id);
+                    await dbProduct.DeleteById(request.Id);
 
                     return true;
                 }
