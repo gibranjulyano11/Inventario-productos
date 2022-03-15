@@ -1,0 +1,49 @@
+<div *ngIf="modalservice.modal" class="modal" tabindex="-1" style="display: block;">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button (click)="cerrarModal()" type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title text-center">Atributo</h4>
+            </div>
+            <div class="modal-body">
+
+                <div class="container-fluid">
+                    <div *ngIf="name.invalid && (name.dirty || name.touched)" class="alert alert-danger alert-dismissible">
+                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                        <h4><i class="icon fa fa-ban"></i> Alert!</h4>
+                        "Descripcion Reqerida"
+                    </div>
+
+                    <div class="row">
+
+                        <div class="box box-primary">
+                            <div class="box-header with-border">
+
+                            </div>
+                            <div class="box-body">
+                                <form #atributoForm="ngForm">
+
+                                  <div class="form-group row">
+                                        <label for="nombre" class="col-sm-2 col-form-label">Descripción</label>
+                                        <div class="col-sm-6">
+                                          <textarea name="name" #name="ngModel" required placeholder="Ingresa el nombre del atributo" [(ngModel)]="atributo.name" class="type form-control"></textarea>
+                                        </div>
+                                      </div>
+
+                                </form>
+
+                            </div>
+                            <div class="modal-footer">
+                                <button type="submit" class="btn btn-primary pull-right btn-block" role="button" (click)='create()' *ngIf="!atributo.id else elseBlock" [disabled]="!atributoForm.form.valid">Crear</button>
+                                <ng-template #elseBlock>
+                                    <button type="submit" class="btn btn-primary pull-right btn-block" role="button" (click)='update()' [disabled]="!atributoForm.form.valid">Actualizar</button>
+                                </ng-template>
+                                <button (click)="cerrarModal()" type="button" class="btn btn-default btn-block pull-left" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>

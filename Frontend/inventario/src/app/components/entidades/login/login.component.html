@@ -1,0 +1,46 @@
+﻿
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Hammersmith+One&display=swap');
+</style>
+
+  <div class="login-box">
+    <div class="login-logo">
+        <img src="assets/dist/img/logoimpor.png" style="height: 100px;">
+    </div>
+
+    <div class="login-box-body">
+      <p style="font-family: 'Fredoka One', cursive; font-size: 25px; color: #003358; " class="login-box-msg">Inicie
+          Sesión</p>
+                  <div class="card-body">
+                      <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+                        <div class="input-group">
+                          <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                              <input type="text" formControlName="username" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.username.errors }" />
+                              <div *ngIf="submitted && f.username.errors" class="invalid-feedback">
+                                  <div *ngIf="f.username.errors.required">El nombre de usuario es requerido</div>
+                              </div>
+                          </div>
+
+                          <br>
+
+                          <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                              <input type="password" formControlName="password" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.password.errors }" />
+                              <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                                  <div *ngIf="f.password.errors.required">Lacontraseña es requerida</div>
+                              </div>
+                          </div>
+
+                          <br>
+                          <div class="col-xs-12">
+                          <button [disabled]="loading" style="font-family: 'Hammersmith One', sans-serif; font-size: 16px; font-weight: 100"
+                          class="btn btn-primary btn-block btn-flat">
+                              <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
+                              Acceder
+                          </button>
+                        </div>
+                          <div *ngIf="error" class="alert alert-danger mt-3 mb-0">{{error}}</div>
+                      </form>
+            </div>
+        </div>
+      </div>

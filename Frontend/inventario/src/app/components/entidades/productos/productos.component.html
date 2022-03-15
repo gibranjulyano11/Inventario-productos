@@ -1,0 +1,79 @@
+<!-- LLAMA AL FORMPERSONA HTML EL CUAL ESTÁ DENTRO DE UN MODAL Y SE HACE LA VALIDACION PARA QUE SE MUESTRE EL MODAL SOLO SI EL MODAL ESTÁ INACTIVO -->
+<app-formproducto *ngIf="modalService.modal" [producto]="productoSeleccionado"></app-formproducto>
+<div class="content">
+    <section class="content-header">
+        <h1>PRODUCTOS</h1>
+        <ol class="breadcrumb">
+            <li>
+                <a>
+                    <i class="fa fa-tasks"></i>
+                    Almacén
+                </a>
+            </li>
+            <li>
+                <a>
+                    Productos
+                </a>
+            </li>
+        </ol>
+    </section>
+    <section class="content">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="box">
+                    <div class="box-header breadcrumb">
+                        <i class="fa fa-cube"></i>
+                        <h3 class="box-title">Listado de productos</h3>
+                        <button type="button" style="background: #2365bb; border: #2365bb; border-radius: 5px; height: 38px;" class="btn btn-primary btn-flat pull-right" (click)="abrirModalNuevo()"><i
+                                class="glyphicon glyphicon-plus"></i> Crear Producto</button>
+                    </div>
+                    <div class="box-body">
+                        <div class="dataTables_wrapper form-inline dt-bootstrap">
+                            <div class="row">
+                                <div class="col-sm-6"></div>
+                                <div class="col-sm-6"></div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <table datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger"
+                                        class="table table-bordered table-hover text-center " role="grid">
+                                        <thead>
+                                            <tr>
+                                                <th class="sorting_asc col-sm-2">Nombre</th>
+                                                <th class="sorting col-sm-2">Código</th>
+                                                <th class="sorting col-sm-2">Precio</th>
+                                                <th class="sorting col-sm-2">Categoría</th>
+                                                <th class="sorting col-sm-2">Marca</th>
+                                                <th class="sorting_asc col-sm-3">Descripcion</th>
+                                                <th class="sorting col-sm-2">ED/EL</th>
+
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                             <tr *ngFor="let producto of productos">
+                                                <td>{{producto.name}}</td>
+                                                <td>{{producto.code}}</td>
+                                                <td>{{producto.price}}</td>
+                                                <td>{{producto.category}}</td>
+                                                <td>{{producto.brand}}</td>
+                                                <td>{{producto.attribute}}</td>
+
+                                                <td>
+                                                        <button type="button" style="background: #f1a706; border: #f1a706; border-radius: 2px; height: 35px; width: 35px;" class="btn  btn-primary btn-sm btn-flat" name="update"
+                                                        (click)="abrirModal(producto)"><i class="fa fa-edit"></i></button>
+
+                                                        <button type="button" style="background: #da3434; border: #da3434; border-radius: 2px; height: 35px; width: 35px;" class="btn btn-danger btn-sm btn-flat" name="delete"
+                                                        (click)='delete(producto)'><i class="fa fa-trash-o"></i></button>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>

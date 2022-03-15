@@ -1,0 +1,67 @@
+<!-- LLAMA AL FORMPERSONA HTML EL CUAL ESTÁ DENTRO DE UN MODAL Y SE HACE LA VALIDACION PARA QUE SE MUESTRE EL MODAL SOLO SI EL MODAL ESTÁ INACTIVO -->
+<app-formatributo *ngIf="modalService.modal" [atributo]="atributoSeleccionado"></app-formatributo>
+<div class="content">
+    <section class="content-header">
+        <h1>ATRIBUTOS</h1>
+        <ol class="breadcrumb">
+            <li>
+                <a>
+                    <i class="fa fa-tasks"></i>
+                    Almacén
+                </a>
+            </li>
+            <li>
+                <a>
+                    Atributos
+                </a>
+            </li>
+        </ol>
+    </section>
+    <section class="content">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="box">
+                    <div class="box-header breadcrumb">
+                        <i class="fa fa-cube"></i>
+                        <h3 class="box-title">Listado de atributos</h3>
+                        <button type="button" style="background: #2365bb; border: #2365bb; border-radius: 5px; height: 38px;" class="btn btn-primary btn-flat pull-right" (click)="abrirModalNuevo()"><i
+                                class="glyphicon glyphicon-plus"></i> Crear Atributo</button>
+                    </div>
+                    <div class="box-body">
+                        <div class="dataTables_wrapper form-inline dt-bootstrap">
+                            <div class="row">
+                                <div class="col-sm-6"></div>
+                                <div class="col-sm-6"></div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <table datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger"
+                                        class="table table-bordered table-hover text-center " role="grid">
+                                        <thead>
+                                            <tr>
+                                                <th class="sorting_asc col-sm-3">Descripcion</th>
+                                                <th class="sorting col-sm-2">Editar/Eiminar</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr *ngFor="let atributo of atributos">
+                                                <td>{{atributo.name}}</td>
+                                                <td>
+                                                        <button type="button" style="background: #f1a706; border: #f1a706; border-radius: 2px; height: 35px; width: 35px;" class="btn  btn-primary btn-sm btn-flat" name="actualizar"
+                                                        (click)="abrirModal(atributo)"><i class="fa fa-edit"></i></button>
+
+                                                        <button type="button" style="background: #da3434; border: #da3434; border-radius: 2px; height: 35px; width: 35px;" class="btn btn-danger btn-sm btn-flat" name="eliminar"
+                                                        (click)='delete(atributo)'><i class="fa fa-trash-o"></i></button>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>

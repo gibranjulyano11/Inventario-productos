@@ -1,0 +1,104 @@
+<div *ngIf="modalservice.modal" class="modal" tabindex="-1" style="display: block;">
+  <div class="modal-dialog">
+      <div class="modal-content">
+          <div class="modal-header">
+              <button (click)="cerrarModal()" type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title text-center">PRODUCTO</h4>
+          </div>
+          <div class="modal-body">
+
+              <div class="container-fluid">
+                  <div *ngIf="name.invalid && (name.dirty || name.touched)" class="alert alert-danger alert-dismissible">
+                      <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                      <h4><i class="icon fa fa-ban"></i> Alert!</h4>
+                      "El nombre es requerido"
+                  </div>
+                  <div *ngIf="category.invalid && (category.dirty || category.touched)" class="alert alert-danger alert-dismissible">
+                      <div *ngIf="category.errors.required">
+                        La categoria es requerida
+                      </div>
+                  </div>
+                  <div *ngIf="brand.invalid && (brand.dirty || brand.touched)" class="alert alert-danger alert-dismissible">
+                    <div *ngIf="brand.errors.required">
+                      La marca es requerida
+                    </div>
+                  </div>
+                  <div *ngIf="brand.invalid && (brand.dirty || brand.touched)" class="alert alert-danger alert-dismissible">
+                    <div *ngIf="brand.errors.required">
+                      El codigo es requerido
+                    </div>
+                  </div>
+                  <div *ngIf="price.invalid && (price.dirty || price.touched)" class="alert alert-danger alert-dismissible">
+                    <div *ngIf="price.errors.required">
+                      El precio es requerido
+                    </div>
+                  </div>
+
+                  <div class="row">
+
+                      <div class="box box-primary">
+                          <div class="box-header with-border">
+
+                          </div>
+                          <div class="box-body">
+                              <form #productoForm="ngForm">
+
+                                  <div class="form-group col-md-6">
+                                      <label for="nombre">Nombre</label>
+                                      <input type="text" class="form-control" [(ngModel)]="producto.name" name="name" #name="ngModel" required placeholder="Ingresa el nombre del producto">
+                                  </div>
+                                 <div class="form-group col-md-6">
+                                      <label for="comentarios">Categoría</label>
+                                      <select class="form-control" #category="ngModel" required [(ngModel)]="producto.category" name="category">
+                                      <option *ngFor="let categoria of categoria" [ngValue]="categoria.name">
+                                        {{categoria.name}}
+                                      </option>
+                                      </select>
+                                      </div>
+                                  <div class="form-group col-md-6">
+                                    <label for="comentarios">Marca</label>
+                                    <select class="form-control" #brand="ngModel" required [(ngModel)]="producto.brand" name="brand">
+                                    <option *ngFor="let marca of marca" [ngValue]="marca.name">
+                                      {{marca.name}}
+                                    </option>
+                                  </select>
+                                </div>
+
+                                <div class="form-group col-md-6">
+                                  <label for="comentarios">Código</label>
+                                  <input type="text" class="form-control" #code="ngModel" required [(ngModel)]="producto.code" name="code" placeholder="Ingresa algun comentario">
+                                </div>
+
+                                <div class="form-group col-md-6">
+                                  <label for="comentarios">Precio</label>
+                                  <input type="text" class="form-control" #price="ngModel" required [(ngModel)]="producto.price" name="price" placeholder="Ingresa algun comentario">
+                                </div>
+
+                                <div class="form-group col-md-6">
+                                  <label for="comentarios">Descripcion</label>
+                                  <select class="form-control" #attribute="ngModel" required [(ngModel)]="producto.attribute" name="attribute">
+                                  <option *ngFor="let atributo of atributo" [ngValue]="atributo.name">
+                                    {{atributo.name}}
+                                  </option>
+                                  </select>
+                                </div>
+                              </form>
+
+                          </div>
+                          <div class="modal-footer">
+                              <button type="submit" class="btn btn-primary pull-right btn-block" role="button" (click)='create()' *ngIf="!producto.id else elseBlock" [disabled]="!productoForm.form.valid">Crear</button>
+                              <ng-template #elseBlock>
+                                  <button type="submit" class="btn btn-primary pull-right btn-block" role="button" (click)='update()' [disabled]="!productoForm.form.valid">Actualizar</button>
+                              </ng-template>
+                              <button (click)="cerrarModal()" type="button" class="btn btn-default btn-block pull-left" data-dismiss="modal">Close</button>
+
+                          </div>
+                      </div>
+
+                  </div>
+              </div>
+
+          </div>
+      </div>
+  </div>
